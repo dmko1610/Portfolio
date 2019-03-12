@@ -1,6 +1,6 @@
 const path = require('path');
 const argv = require('yargs').argv;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -63,15 +63,17 @@ const config = {
                     options: {
                         name: 'images/[name][hash].[ext]'
                     }
-                }, {
-                    loader: 'image-webpack-loader',
-                    options: {
-                        mozjpeg: {
-                            progressive: true,
-                            quality: 70
-                        }
-                    }
-                }, ],
+                },
+                //     {
+                //     loader: 'image-webpack-loader',
+                //     options: {
+                //         mozjpeg: {
+                //             progressive: true,
+                //             quality: 70
+                //         }
+                //     }
+                // },
+                ],
             }, {
                 test: /\.(eot|svg|ttf|woff|woff2)$/,
                 use: {
@@ -84,20 +86,12 @@ const config = {
         ]
     },
     plugins: [
-        // new MiniCssExtractPlugin({
-        //     filename: '[name].css',
-        //     chunkFilename: '[id].css'
-        // }),
         new HtmlWebpackPlugin({
             template: './src/index.pug'
         }),
         new ExtractTextPlugin({
             filename: 'style.css'
         })
-        //     filename: 'style-[contenthash].css',
-        //     disable: false,
-        //     allChunks: false, // true
-        //   })
     ],
     optimization: isProduction ? {
         minimizer: [
