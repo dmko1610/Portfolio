@@ -1,25 +1,23 @@
 {
-  "name": "trulywebpackproject",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "babel.config.js",
+  "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "rimraf public && npm install",
     "build": "webpack --mode production --colors --progress",
-    "prestart": "rimraf public && npm install",
     "start": "webpack-dev-server --mode development --hot --colors --progress"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmko1610/TrulyWebpackProject.git"
+    "url": "git+https://github.com/dmko1610/Portfolio.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dmko1610/TrulyWebpackProject/issues"
+    "url": "https://github.com/dmko1610/Portfolio/issues"
   },
-  "homepage": "https://github.com/dmko1610/TrulyWebpackProject#readme",
+  "homepage": "https://github.com/dmko1610/Portfolio#readme",
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
@@ -33,16 +31,10 @@
     "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.0.6",
-    "image-webpack-loader": "^4.3.1",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
-    "mini-css-extract-plugin": "^0.4.2",
-    "node-sass": "^4.9.3",
-    "postcss-loader": "^3.0.0",
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
-    "rimraf": "^2.6.3",
-    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "uglifyjs-webpack-plugin": "^1.3.0",
     "webpack": "^4.28.3",
